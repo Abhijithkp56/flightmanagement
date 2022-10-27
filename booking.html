@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+<body bgcolor="white" >
+    <center>
+    
+    <h1 align="center"> Book your flight</h1>
+    <h3 align="left"> Search flights</h3>
+    <a href="Index.html" style="color:black"> Back to home page</a>
+    <p> The <span style="color:indigo">Indigo</span> airlines is ready to go</p>
+    <form method="POST" action="print2.html">
+        <table bgcolor="white">
+            <tr>
+                <td>
+                    <label for="title">Title</label>
+
+                </td>
+                <td>
+                    <select id="title" name="title">
+                        <option value="1" >Mr</option>
+                        <option value="2" >Mrs</option>
+                        <option value="3"  selected> Ms</option>
+                    </select>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><label for="First Name">First Name:</label></td>
+                <td><input type="text" id="firstName"> <br></td>
+            </tr>
+            <tr>
+                <td><label for="Last Name">Last Name:</label></td>
+                <td><input type="text" id="lastName"><br></td>
+            </tr>
+              
+            <tr>
+                <td><label for="Gender">Gender: </label> </td>
+                <td><input type="radio" id="male" name="gender" >Male 
+                <input type="radio" id="female" name="gender" >Female </td>
+            </tr>
+    
+            <tr><td><label for="Email">Email:</label></td>
+                <td><input type="text"><br></td></tr>
+            <tr>
+                <td>
+                <label for="Phone">Phone:</label></td>
+                <td><input type="text"><br></td></tr>
+            <tr><td><label for="Age">Age:</label></td>
+                <td><input type="text"><br></td></tr>
+            <tr>
+        
+                    
+                <td>
+                    <label for="dob">Date of birth:</label></td>
+                <td><input type="date"><br></td></tr>
+        
+            <tr>
+        
+                <td>
+                    <label for="address">Address:</label></td>
+                    <td><textarea rows="6" cols="20" id="address"></textarea><br></td></tr>
+            <tr>
+                <td>
+
+                <input type="file" name="fileupload" accept="image/*"/>
+                </td>
+            </tr> 
+            <tr>
+                <td><label for="contact">Can we contact you ? </label> </td>
+                <td><input type="radio" id="yes" name="contact"> Yes 
+                <input type="radio" id="no" name="contact"> No </td>
+    
+            </tr>
+            <tr>
+                <td><label for="communication"> Communication Preference</label> </td>
+                <td><input type="checkbox" id="email" name="com">Email 
+                    <input type="checkbox" id="sms" name="com" > SMS </td>
+    
+            </tr>
+            <tr>
+                <td>
+                    <video width="500" height="400" loop controls autoplay muted>
+                        <source src="./file_example_MP4_480_1_5MG.mp4" type="video/mp4">
+                    </video>
+                </td>
+            </tr>
+                    
+                       
+               
+            
+            <tr>
+                <td><input type="submit" onclick="javascript:saveData()"; id="submit" name="submit" value="submit" ></td>
+                <td><input type="reset" id="reset" name="reset" value="reset"></td>
+            </tr>
+        
+        
+    
+    
+    
+            
+        </table>
+    </form>
+    </center>
+    <script>
+        function saveData(){
+            var firstName = document.getElementById('firstName').value;
+            console.log("Name",firstName);
+            var lastName = document.getElementById('lastName').value;
+            var address = document.getElementById('address').value;
+            //alert('firstName'+firstName);
+            // var formData=new Object();
+            // formData.firstname=firstName;
+            // formData.lastName=lastName;
+            // formData.address=address;
+        // console.log(formData);
+        
+        localStorage.setItem('FirstName',firstName);
+    }
+    
+    
+    
+    </script>
+    
+</body>
+</html>
